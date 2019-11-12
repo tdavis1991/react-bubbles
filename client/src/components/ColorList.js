@@ -17,19 +17,19 @@ const ColorList = ({ colors, updateColors }) => {
     setColorToEdit(color);
   };
 
-  const saveEdit = (e, id) => {
+  const saveEdit = (e) => {
     e.preventDefault();
     // Make a put request to save your updated color
     // think about where will you get the id from...
     // where is is saved right now?
-    const color = colors.find((e) => e.id === id)
+    const colorEdit = colors.find((color) => color.id === colorToEdit.id)
 
 
 
     api()
-      .put(`/api/colors/${e.id}`, colorToEdit)
+      .put(`/api/colors/${colorToEdit.id}`, colorToEdit)
         .then(res => {
-          console.log(e.id)
+          console.log(colorEdit)
         }).catch(err => {
           console.log(err)
         })
