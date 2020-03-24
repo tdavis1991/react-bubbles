@@ -12,12 +12,12 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {!signedIn && <Route exact path="/" component={Login} />}
-        {/* 
-          Build a PrivateRoute component that will 
-          display BubblePage when you're authenticated 
-        */}
-        {signedIn && <Link to="/bubble-page">Bubble Page</Link>}
+        {!signedIn &&
+          <div className="login-page">
+            <h1>React Bubbles</h1> 
+            <Route exact path="/" component={Login} />
+          </div>
+        }
         <ProtectedRoute exact path="/bubble-page" component={BubblePage} />
       </div>
     </Router>

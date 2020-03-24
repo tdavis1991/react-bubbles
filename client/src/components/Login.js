@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from 'axios';
 import api from '../utils/api';
+import '../styles.scss';
 
 
 const Login = (props) => {
@@ -38,20 +39,22 @@ const Login = (props) => {
     <>
       <form onSubmit={handleSubmit}>
         <input
+          className="input-styles"
           type="text"
           name="username"
           value={user.username}
-          placeholder="Username"
+          placeholder="  Username"
           onChange={handleChange}
         />
         <input
+          className="input-styles"
           type="text"
           name="password"
           value={user.password}
-          placeholder="Password"
+          placeholder="  Password"
           onChange={handleChange}
         />
-        <button type="submit">Login</button>
+        <button className="button-styles" type="submit">Login</button>
       </form>
     </>
   );

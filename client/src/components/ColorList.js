@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import api from '../utils/api';
+import AddBubbles from './AddBubbles';
 
 const initialColor = {
   color: "",
@@ -23,6 +24,7 @@ const ColorList = ({ colors, updateColors }) => {
     // think about where will you get the id from...
     // where is is saved right now?
     const colorEdit = colors.find((color) => color.id === colorToEdit.id)
+    console.log('colorEdit:', colorEdit)
 
 
 
@@ -106,8 +108,10 @@ const ColorList = ({ colors, updateColors }) => {
           </div>
         </form>
       )}
+      <AddBubbles />
       <div className="spacer" />
       {/* stretch - build another form here to add a color */}
+      
     </div>
   );
 };
