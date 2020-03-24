@@ -97,3 +97,41 @@ form {
     margin-top: 16px;
   }
 }
+
+.login-page {
+  margin: 0 auto;
+  width:30%;
+
+  .input-styles {
+    width: 60%;
+    margin: 5px auto;
+    border-radius: 20px;
+    border-color: violet;
+  }
+
+  .button-styles {
+    width: 50%;
+    margin: 5px auto;
+    border-radius: 20px;
+    background-color: beige;
+  }
+}
+
+.add-bubbles {
+  width: 90%;
+  margin: 0 auto;
+
+  .input-styles {
+    width: 95%;
+    margin: 5px auto;
+    border-radius: 10px;
+    border-color: violet;
+  }
+
+  .button-styles {
+    width: 90%;
+    margin: 5px auto;
+    border-radius: 10px;
+    background-color: powderblue;
+  }
+}
